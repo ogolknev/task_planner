@@ -1,17 +1,42 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 
-    <p>Hello</p>
+    <aside>
+        <div class="header">
 
-    {% block content %}
-    {% endblock %}
+            <div class="menu-icon" id="menu-icon">
+                <div class="line-1" id="menu-line-1"></div>
+                <div class="line-2" id="menu-line-2"></div>
+                <div class="line-3" id="menu-line-3"></div>
+            </div>
+
+            <span class="title" id="title">task planner</span>
+            
+        </div>
+
+        <div class="menu-block" id="menu-block">
+            <span class="menu-option">Settings</span>
+        </div>
+
+    </aside>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script src="{% static 'main/js/main.js' %}"></script>
+    
 
 </body>
 </html>

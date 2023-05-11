@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway/Raleway-VariableFont_wght.ttf');
+  }
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background: #333333;
+    margin: 0;
+}
+
+
+.header{
+    position: static;
+    width: 100%;
+    height: 80px;
+    background: white;
+}
+
+.menu-icon{
+    z-index: 1;
+    position: absolute;
+    top: 23px;
+    left: 60px;
+    transition: all 0.65s ease;
+}
+
+.menu-icon-on{
+    z-index: 1;
+    position: absolute;
+    top: 23px;
+    left: 615px;
+    transition: all 0.55s ease;
+}
+
+.menu-icon div, .menu-icon-on div{
+    width: 45px;
+    height: 5px;
+    background: #333333;
+}
+
+.line-1{
+    transition: all 0.1s linear;
+}
+
+.line-2{
+    margin: 9px 0;
+    transition: all 0.1s linear;
+}
+
+.line-3{
+    transition: all 0.1s linear;
+}
+
+.line-1-on{
+    position: relative;
+    top: 10px;
+    rotate: -45deg;
+    transition: all 0.1s linear;
+}
+
+.line-2-on{
+    position: relative;
+    top: 5px;
+    rotate: 45deg;
+    transition: all 0.1s linear;
+}
+
+.line-3-on{
+    position: relative;
+    rotate: -45deg;
+    transition: all 0.1s linear;
+}
+
+.title{
+    position: relative;
+    left: 165px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 75px;
+    color: #333333;
+    transition: all 0.8s ease-in;
+}
+
+.title-on{
+    position: relative;
+    left: 80%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 75px;
+    color: #333333;
+    transition: all 0.7s ease-in;
+}
+
+.menu-option{
+    position: absolute;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    left: 298px;
+    top: 120px
+}
+
+aside{
+    height: 100%;
+}
+
+.menu-block{
+    height: 100%;
+    width: 720px;
+    position: absolute;
+    top: 0;
+    left: -720px;
+
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(15px);
+    transition: all 0.6s ease;
+}
+
+
+.menu-block-on{
+    height: 100%;
+    width: 720px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    transition: all 0.6s ease;
+}
