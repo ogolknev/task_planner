@@ -1,8 +1,83 @@
 {% extends 'main/layout.html' %}
+{% load static %}
 
-{% block title %}text planner{% endblock %}
+{% block title %}task planner{% endblock %}
 
 {% block content %}
+
+    <div class="folder-section" id="folder-section">
+        <img src="{% static 'main/img/svg/material-symbols_arrow-back-ios.svg' %}" alt="" class="folder-arrow" id="folder-arrow">
+        <div class="folder-head" id="folder-head">Folders:</div>
+        <div class="folder-btns" id="folder-btns">
+            <div class="add-btn">
+                <div>
+                    <img src="{% static 'main/img/svg/add.svg' %}" alt="">
+                    <span>Add</span>
+                </div>
+            </div>
+            <div class="reorder-btn">
+                <div>
+                    <img src="{% static 'main/img/svg/reorder.svg' %}" alt="">
+                    <span>Reorder</span>
+                </div>
+            </div>
+        </div>
+        <div class="folders">
+            {% for i in 10|get_range %}
+                <div class="folder">
+                    <img class="folder-icon" src="{% static 'main/img/svg/folder.svg' %}">
+                    <span class="folder-name">Folder {{i}}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="task-section" id="task-section">
+        <div class="task-head">Today:</div>
+        <div class="task-btns">
+            <div class="add-btn">
+                <div>
+                    <img src="{% static 'main/img/svg/add.svg' %}" alt="">
+                    <span>Add</span>
+                </div>
+            </div>
+            <div class="edit-btn">
+                <div>
+                    <img src="{% static 'main/img/svg/edit.svg' %}" alt="">
+                    <span>Edit</span>
+                </div>
+            </div>
+        </div>
+        {% for i in 50|get_range %}
+            <div class="task">
+                <div class="checkbox"></div>
+                <div class="task-description">
+                    <span class="taskname">Task {{i}}</span>
+                    <p class="description">Description</p>
+                </div>
+                <div class="steps">
+                    <span>Steps</span>
+                    <div class="steps-block" id="steps-block">
+                        {% if i|get_parity%}
+                            {% for j in 10|get_range %}
+                                <div class="step">
+                                    <div class="step-checkbox">
+                                        <img src="{% static 'main/img/svg/check-mark.svg' %}" alt="">
+                                    </div>
+                                    <p>Step {{j}}</p>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="info">
+                    <span class="priority">10</span>
+                    <span class="date">Today</span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}
 
 

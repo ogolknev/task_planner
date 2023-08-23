@@ -11,24 +11,23 @@
 </head>
 <body>
 
-    <aside>
-        <div class="header">
+    <div class="header">
 
-            <div class="menu-icon" id="menu-icon">
-                <div class="line-1" id="menu-line-1"></div>
-                <div class="line-2" id="menu-line-2"></div>
-                <div class="line-3" id="menu-line-3"></div>
-            </div>
+        <span class="title" id="title">task planner</span>
+        
+    </div>
 
-            <span class="title" id="title">task planner</span>
-            
+    <div class="menu-block" id="menu-block">
+
+        <div class="menu-icon" id="menu-icon">
+            <div class="menu-line-1" id="menu-line-1"></div>
+            <div class="menu-line-2" id="menu-line-2"></div>
+            <div class="menu-line-3" id="menu-line-3"></div>
         </div>
 
-        <div class="menu-block" id="menu-block">
-            <span class="menu-option">Settings</span>
-        </div>
-
-    </aside>
+        <span class="menu-option">Settings</span>
+        
+    </div>
 
     <main>
         {% block content %}
@@ -37,6 +36,5 @@
 
     <script src="{% static 'main/js/main.js' %}"></script>
     
-
 </body>
 </html>
