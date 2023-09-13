@@ -57,11 +57,11 @@
                 </div>
                 <div class="steps">
                     <span>Steps</span>
-                    <div class="steps-block" id="steps-block">
+                    <div class="steps-block steps-div" id="steps-block">
                         {% if i|get_parity%}
                             {% for j in 10|get_range %}
                                 <div class="step">
-                                    <div class="step-checkbox">
+                                    <div class="step-checkbox" id="step-checkbox{{i}}{{j}}">
                                         <img src="{% static 'main/img/svg/check-mark.svg' %}" alt="">
                                     </div>
                                     <p>Step {{j}}</p>

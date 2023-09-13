@@ -5,7 +5,12 @@ function sleep(ms) {
 
 document.getElementsByClassName('menu-icon')[0].addEventListener('click', openMenu);
 document.getElementsByClassName('folder-arrow')[0].addEventListener('click', openFolders);
-document.getElementsByClassName('step-checkbox')[0].addEventListener('click', comply)
+
+step_checkboxs = document.querySelectorAll('.step-checkbox');
+
+step_checkboxs.forEach(element => {
+    element.addEventListener('click', comply)
+});
 
 menu_block = document.getElementById('menu-block');
 menu_icon = document.getElementById('menu-icon');
@@ -74,11 +79,11 @@ function comply(){
 
     step_block_class = step_block.getAttribute('class');
 
-    if(step_block_class == 'steps-block'){
-        step_block.className = 'steps-block-on';
+    if(step_block_class == 'steps-block steps-div'){
+        step_block.className = 'steps-block-on steps-div';
     }
     else{
-        step_block.className = 'steps-block';
+        step_block.className = 'steps-block steps-div';
     }
 
 }
